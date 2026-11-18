@@ -49,3 +49,4 @@ COPY . .
 
 EXPOSE 8080
 ENTRYPOINT [ "python", "email_server.py" ]
+# CI rebuild trigger - 2026-11-18

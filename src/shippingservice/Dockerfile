@@ -39,3 +39,4 @@ ENV GOTRACEBACK=single
 
 EXPOSE 50051
 ENTRYPOINT ["/src/shippingservice"]
+# CI rebuild trigger - 2026-11-18

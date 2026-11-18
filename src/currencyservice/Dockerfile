@@ -40,3 +40,4 @@ COPY . .
 EXPOSE 7000
 
 ENTRYPOINT [ "node", "server.js" ]
+# CI rebuild trigger - 2026-11-18

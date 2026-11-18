@@ -39,3 +39,4 @@ ENV GOTRACEBACK=single
 
 EXPOSE 5050
 ENTRYPOINT ["/src/checkoutservice"]
+# CI rebuild trigger - 2026-11-18

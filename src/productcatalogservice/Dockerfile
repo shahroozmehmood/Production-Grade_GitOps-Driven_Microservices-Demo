@@ -39,3 +39,4 @@ ENV GOTRACEBACK=single
 
 EXPOSE 3550
 ENTRYPOINT ["/src/server"]
+# CI rebuild trigger - 2026-11-18
