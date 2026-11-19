@@ -1,3 +1,4 @@
+
 name: Microservice CI
 
 on:
@@ -37,18 +38,27 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       # -------------------
-      # Build Docker image (cached)
+      # Build Image (service-specific Dockerfile support)
       # -------------------
       - name: Build Image
         run: |
-          docker build \
-            --cache-from=type=gha \
-            --cache-to=type=gha,mode=max \
-            -t $IMAGE_NAME \
-            ./src/${{ inputs.service }}
+          if [ "${{ inputs.service }}" = "cartservice" ]; then
+            docker build \
+              --file ./src/cartservice/src/Dockerfile \
+              --cache-from=type=gha \
+              --cache-to=type=gha,mode=max \
+              -t "$IMAGE_NAME" \
+              ./src/cartservice
+          else
+            docker build \
+              --cache-from=type=gha \
+              --cache-to=type=gha,mode=max \
+              -t "$IMAGE_NAME" \
+              ./src/${{ inputs.service }}
+          fi
 
       # -------------------
-      # Security Scan (before push)
+      # Security Scan
       # -------------------
       - name: Run Trivy Scan
         uses: aquasecurity/trivy-action@v0.20.0
@@ -60,8 +70,8 @@ jobs:
           vuln-type: os,library
 
       # -------------------
-      # Push image (only if scan passes)
+      # Push Image
       # -------------------
       - name: Push Image
         run: |
-          docker push $IMAGE_NAME
+          docker push "$IMAGE_NAME"
