@@ -48,7 +48,7 @@ jobs:
               --cache-from=type=gha \
               --cache-to=type=gha,mode=max \
               -t "$IMAGE_NAME" \
-              ./src/cartservice
+              ./src/cartservice/src
           else
             docker build \
               --cache-from=type=gha \
