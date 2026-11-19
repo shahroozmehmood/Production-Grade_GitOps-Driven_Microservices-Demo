@@ -20,37 +20,37 @@ images:
   adservice:
     repository: ghcr.io/shahroozmehmood/microservices-demo/adservice
     # Overrides the image tag whose default is the chart appVersion.
-    tag: v0.10.4
+    tag: sha-544f48b9ce11ad3c07c1419921810823785bf911
   cartservice:
     repository: ghcr.io/shahroozmehmood/microservices-demo/cartservice
-    tag: v0.10.4
+    tag: sha-0ee0122463d2a925cba45c422ff0a0dba53fc71e
   checkoutservice:
     repository: ghcr.io/shahroozmehmood/microservices-demo/checkoutservice
-    tag: v0.10.4
+    tag: sha-544f48b9ce11ad3c07c1419921810823785bf911
   currencyservice:
     repository: ghcr.io/shahroozmehmood/microservices-demo/currencyservice
-    tag: v0.10.4
+    tag: sha-544f48b9ce11ad3c07c1419921810823785bf911
   emailservice:
     repository: ghcr.io/shahroozmehmood/microservices-demo/emailservice
-    tag: v0.10.4
+    tag: sha-544f48b9ce11ad3c07c1419921810823785bf911
   frontend:
     repository: ghcr.io/shahroozmehmood/microservices-demo/frontend
-    tag: v0.10.4
+    tag: sha-544f48b9ce11ad3c07c1419921810823785bf911
   loadgenerator:
     repository: ghcr.io/shahroozmehmood/microservices-demo/loadgenerator
-    tag: v0.10.4
+    tag: sha-544f48b9ce11ad3c07c1419921810823785bf911
   paymentservice:
     repository: ghcr.io/shahroozmehmood/microservices-demo/paymentservice
-    tag: v0.10.4
+    tag: sha-544f48b9ce11ad3c07c1419921810823785bf911
   productcatalogservice:
     repository: ghcr.io/shahroozmehmood/microservices-demo/productcatalogservice
-    tag: v0.10.4
+    tag: sha-544f48b9ce11ad3c07c1419921810823785bf911
   recommendationservice:
     repository: ghcr.io/shahroozmehmood/microservices-demo/recommendationservice
-    tag: v0.10.4
+    tag: sha-544f48b9ce11ad3c07c1419921810823785bf911
   shippingservice:
     repository: ghcr.io/shahroozmehmood/microservices-demo/shippingservice
-    tag: v0.10.4
+    tag: sha-544f48b9ce11ad3c07c1419921810823785bf911
 
 serviceAccounts:
   # Specifies whether service accounts should be created.
