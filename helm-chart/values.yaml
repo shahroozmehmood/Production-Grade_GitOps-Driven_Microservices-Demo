@@ -20,7 +20,7 @@ images:
   adservice:
     repository: ghcr.io/shahroozmehmood/microservices-demo/adservice
     # Overrides the image tag whose default is the chart appVersion.
-    tag: sha-544f48b9ce11ad3c07c1419921810823785bf911
+    tag: sha-5b0b213d68cb4f8bf32db4486d141602c2a0256f
   cartservice:
     repository: ghcr.io/shahroozmehmood/microservices-demo/cartservice
     tag: sha-0ee0122463d2a925cba45c422ff0a0dba53fc71e
@@ -51,7 +51,6 @@ images:
   shippingservice:
     repository: ghcr.io/shahroozmehmood/microservices-demo/shippingservice
     tag: sha-544f48b9ce11ad3c07c1419921810823785bf911
-
 serviceAccounts:
   # Specifies whether service accounts should be created.
   create: true
@@ -59,37 +58,29 @@ serviceAccounts:
   annotations: {}
   # Annotations to add only for the cartservice app. This allows to follow the least privilege principle where only cartservice needs to connect to external database for example via Workload Identity.
   annotationsOnlyForCartservice: false
-
 networkPolicies:
   # Specifies if the NetworkPolicies are created or not. If true, one fine granular NetworkPolicy per app is created.
   create: false
-
 sidecars:
   # Specifies if the Sidecars are created or not. If true, one fine granular Sidecar per app is created.
   create: false
-
 authorizationPolicies:
   # Specifies if the AuthorizationPolicies are created or not. If true, one fine granular AuthorizationPolicy per app is created.
   create: false
-
 opentelemetryCollector:
   create: false
   name: opentelemetrycollector
   # Specifies the project id for the otel collector. If set as "PROJECT_ID" (default value), an initContainer will automatically retrieve the project id value from the metadata server.
   projectId: "PROJECT_ID"
-
 googleCloudOperations:
   profiler: false
   tracing: false
   metrics: false
-
 seccompProfile:
   enable: false
   type: RuntimeDefault
-
 securityContext:
   enable: true
-
 adService:
   create: true
   name: adservice
@@ -100,7 +91,6 @@ adService:
     limits:
       cpu: 300m
       memory: 300Mi
-
 cartService:
   create: true
   name: cartservice
@@ -111,7 +101,6 @@ cartService:
     limits:
       cpu: 300m
       memory: 256Mi
-
 checkoutService:
   create: true
   name: checkoutservice
@@ -122,7 +111,6 @@ checkoutService:
     limits:
       cpu: 200m
       memory: 128Mi
-
 currencyService:
   create: true
   name: currencyservice
@@ -133,7 +121,6 @@ currencyService:
     limits:
       cpu: 200m
       memory: 256Mi
-
 emailService:
   create: true
   name: emailservice
@@ -144,7 +131,6 @@ emailService:
     limits:
       cpu: 200m
       memory: 128Mi
-
 frontend:
   create: true
   name: frontend
@@ -169,7 +155,6 @@ frontend:
     limits:
       cpu: 200m
       memory: 128Mi
-
 loadGenerator:
   create: true
   name: loadgenerator
@@ -181,7 +166,6 @@ loadGenerator:
     limits:
       cpu: 500m
       memory: 512Mi
-
 paymentService:
   create: true
   name: paymentservice
@@ -192,7 +176,6 @@ paymentService:
     limits:
       cpu: 200m
       memory: 256Mi
-
 productCatalogService:
   create: true
   name: productcatalogservice
@@ -205,7 +188,6 @@ productCatalogService:
     limits:
       cpu: 200m
       memory: 128Mi
-
 recommendationService:
   create: true
   name: recommendationservice
@@ -216,7 +198,6 @@ recommendationService:
     limits:
       cpu: 200m
       memory: 450Mi
-
 shippingService:
   create: true
   name: shippingservice
@@ -227,7 +208,6 @@ shippingService:
     limits:
       cpu: 200m
       memory: 128Mi
-
 cartDatabase:
   # Specifies the type of the cartservice's database, could be either redis or spanner.
   type: redis
@@ -243,7 +223,6 @@ cartDatabase:
     endpointAddress: ""
     endpointPort: ""
     certificate: ""
-
 # @TODO: This service is not currently available in Helm.
 # https://github.com/GoogleCloudPlatform/microservices-demo/tree/main/kustomize/components/shopping-assistant
 shoppingAssistantService:
