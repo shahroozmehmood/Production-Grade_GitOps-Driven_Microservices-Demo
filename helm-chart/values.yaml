@@ -23,13 +23,13 @@ images:
     tag: sha-5b0b213d68cb4f8bf32db4486d141602c2a0256f
   cartservice:
     repository: ghcr.io/shahroozmehmood/microservices-demo/cartservice
-    tag: sha-0ee0122463d2a925cba45c422ff0a0dba53fc71e
+    tag: sha-dbdf858e991421b4d7287a3091df999dcefac912
   checkoutservice:
     repository: ghcr.io/shahroozmehmood/microservices-demo/checkoutservice
-    tag: sha-544f48b9ce11ad3c07c1419921810823785bf911
+    tag: sha-dbdf858e991421b4d7287a3091df999dcefac912
   currencyservice:
     repository: ghcr.io/shahroozmehmood/microservices-demo/currencyservice
-    tag: sha-544f48b9ce11ad3c07c1419921810823785bf911
+    tag: sha-dbdf858e991421b4d7287a3091df999dcefac912
   emailservice:
     repository: ghcr.io/shahroozmehmood/microservices-demo/emailservice
     tag: sha-544f48b9ce11ad3c07c1419921810823785bf911
