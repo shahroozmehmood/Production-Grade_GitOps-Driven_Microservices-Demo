@@ -10,7 +10,7 @@ spec:
 #    repoURL: https://github.com/laxmikantagiri/Production-Grade_GitOps-Driven_Microservices-Demo.git
     repoURL: https://github.com/shahroozmehmood/Production-Grade_GitOps-Driven_Microservices-Demo.git
     targetRevision: HEAD
-    path: .
+    path: helm-chart
 
   destination:
     server: https://kubernetes.default.svc
